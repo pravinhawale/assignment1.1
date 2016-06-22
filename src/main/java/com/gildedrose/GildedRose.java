@@ -14,6 +14,16 @@ public class GildedRose {
                 if (items[i].quality > 0) {
                     if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
                         items[i].quality = items[i].quality - 1;
+                        if (items[i].name.equals("Sulfuras New") && items[i].quality < 10) {
+                    		items[i].quality = items[i].quality + 1;
+                    		items[i].sellIn = items[i].sellIn - 1;
+                    		continue;   
+                    	}
+                    }
+                    if (items[i].name.equals("Conjured Mana Cake")) {
+                    	items[i].quality = items[i].quality - 1;
+                    	items[i].sellIn = items[i].sellIn - 1;
+                		continue;
                     }
                 }
             } else {

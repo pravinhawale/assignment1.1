@@ -1,3 +1,5 @@
+package com.gildedrose;
+
 import com.gildedrose.GildedRose;
 import com.gildedrose.Item;
 import org.junit.Test;
@@ -138,7 +140,7 @@ public class GildedRoseTest {
     @Test
     public void shouldNotDecreaseQualityBelow10_ButWillDecreaseByOneForEveryDecInSellIn_Sulfuras_New() {
         //given
-        Item[] items = new Item[] { new Item("Sulfuras, New Product", 1, 11) };
+        Item[] items = new Item[] { new Item("Sulfuras New", 1, 11) };
         GildedRose app = new GildedRose(items);
         //when
         app.updateQuality();
